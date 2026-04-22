@@ -4,7 +4,7 @@ import PublicLayout from "../components/layout/PublicLayout";
 // Renders the / (landing page) route.
 export default function LandingPage() {
   return (
-    <PublicLayout showFooter={true}>
+    <PublicLayout showFooter={true} logoPosition="left">
       <div className="landing-page">
         <section className="landing-page__hero">
           <h1 className="landing-page__title">Secure Password Vault System</h1>

@@ -1,12 +1,24 @@
-// Provides the shared page frame for landing and auth pages.
+import { Link } from "react-router-dom";
 import Logo from "../branding/Logo";
 import Footer from "./Footer";
 
-export default function PublicLayout({ children, showFooter = false }) {
+export default function PublicLayout({
+  children,
+  showFooter = false,
+  logoPosition = "left",
+}) {
   return (
     <div className="public-layout">
-      <div className="public-layout__logo">
-        <Logo />
+      <div
+        className={`public-layout__logo public-layout__logo--${logoPosition}`}
+      >
+        <Link
+          to="/"
+          className={`public-layout__logo-link public-layout__logo-link--${logoPosition}`}
+          aria-label="Go to landing page"
+        >
+          <Logo />
+        </Link>
       </div>
 
       <main className="public-layout__content">{children}</main>
