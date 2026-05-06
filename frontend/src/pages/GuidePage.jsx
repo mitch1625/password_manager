@@ -1,14 +1,13 @@
-import PublicLayout from "../components/layout/PublicLayout"
-import NavBar from "../components/ui/NavBar"
-function GuidePage() {
-    return (
-        <PublicLayout logoPosition="left">
-            <NavBar/>
-        </PublicLayout>
-      
+import AppShell from "../components/layout/AppShell";
 
-    )
+function GuidePage() {
+  return (
+    <AppShell>
+      <section className="guide-page">
+        <h1>Documentation</h1>
+      </section>
+    </AppShell>
+  );
 }
 
-
-export default GuidePage
+export default GuidePage;
